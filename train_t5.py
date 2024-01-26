@@ -26,8 +26,8 @@ FILE_SAMPLE = '/{}_xglm-2.9b_sample-t0.6_4.txt'
 FILE_GREEDY = '/{}_xglm-2.9b_greedy.txt'
 
 # the following 2 hyperparameters are task-specific
-MAX_SOURCE_LENGTH = 256
-MAX_TARGET_LENGTH = 1024
+MAX_SOURCE_LENGTH = 1024
+MAX_TARGET_LENGTH = 256
 SELECTION_METRIC = 'bleu'
 
 NUM_SAMPLES = 4

@@ -1,6 +1,6 @@
 from transformers import Seq2SeqTrainingArguments, DataCollatorForSeq2Seq, Seq2SeqTrainer
 
-MODELS_DIR = '/home/georgios.vernikos/data-local/hf_models/'
+MODELS_DIR = '<the directory to store hf models>'
 
 def t5_trainer(output_dir, model, tokenizer, tokenized_dataset, task_metrics, batch_size, steps, max_steps, selection_metric,
                max_target_length, grad_acc_steps):
