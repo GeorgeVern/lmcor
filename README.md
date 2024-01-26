@@ -50,7 +50,7 @@ python train_t5.py --task xsum --corrector --bsize 8 --grad_acc_steps 16 --outpu
 ```
 > Note: to train a standard t5 model remove the `--corrector` flag
 
-** MODELS DIR**
+> To change the directory where the HuggingFace models are stored edit the `MODELS_DIR` global variable in the `t5_utils.py` script
 
 ## Evaluate LMCor
 
