@@ -9,7 +9,7 @@ def read_textfile(filename, step=0):
     :return: a list of lines
     """
     with open(filename, "r") as f:
-        textfile = [line.strip() for line in f.readlines()]
+        textfile = f.readlines()
 
     # reshape to 2D array
     if step:

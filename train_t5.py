@@ -1,5 +1,5 @@
 import argparse
-
+import os
 from io_utils import read_textfile
 from t5_utils import t5_trainer, MODELS_DIR
 from transformers import T5ForConditionalGeneration, AutoTokenizer
@@ -22,8 +22,8 @@ MODEL = "google/t5-v1_1-base"
 tokenizer = AutoTokenizer.from_pretrained(MODEL, legacy=False)
 
 # corrector parameters
-FILE_SAMPLE = '/{}_xglm-2.9b_sample-t0.6_4.txt'
-FILE_GREEDY = '/{}_xglm-2.9b_greedy.txt'
+FILE_SAMPLE = '/{}_polylm_sample-t0.6_4.txt'
+FILE_GREEDY = '/{}_polylm_greedy_1.txt'
 
 # the following 2 hyperparameters are task-specific
 MAX_SOURCE_LENGTH = 1024
@@ -134,11 +134,13 @@ def main(args):
     TASK = args.task  # Set the value of TASK
 
     data_dir = DATA_PATH.format(TASK)
+    os.makedirs(data_dir, exist_ok=True)
 
     if TASK != 'wmt22':
         training_data = load_dataset(TASK)
     else:
         data_dir += '/{}-{}/'.format(SRC, TGT)
+        os.makedirs(data_dir, exist_ok=True)
         training_data_split = {}
         for split in ["train", 'validation']:
             source_data = read_textfile(data_dir + '/{}.{}'.format(split, SRC))
