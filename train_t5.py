@@ -22,8 +22,8 @@ MODEL = "google/t5-v1_1-base"
 tokenizer = AutoTokenizer.from_pretrained(MODEL, legacy=False)
 
 # corrector parameters
-FILE_SAMPLE = '/{}_polylm_sample-t0.6_4.txt'
-FILE_GREEDY = '/{}_polylm_greedy_1.txt'
+FILE_SAMPLE = '/{}_xglm-2.9b_sample-t0.6_4.txt'
+FILE_GREEDY = '/{}_xglm-2.9b_greedy_1.txt'
 
 # the following 2 hyperparameters are task-specific
 MAX_SOURCE_LENGTH = 1024
