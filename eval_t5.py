@@ -55,10 +55,10 @@ def main(args):
             source_data.append(datapoint[task_features[args.task][0]])
             references.append(datapoint[task_features[args.task][1]])
 
-    if "corrector" in model_path:
+    if args.corrector:
         sampled_data_file = FILE_SAMPLE.format(data_dir, args.split)
         greedy_data_file = FILE_GREEDY.format(data_dir, args.split)
-        single_cand = True if "single" in model_path else False
+        single_cand = True if args.single_candidate in model_path else False
         source_data = _create_corrector_data(source_data, sampled_data_file, greedy_data_file,
                                              single_cand)
 
@@ -104,6 +104,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Evaluate the corrector/baseline for a specific task.')
     parser.add_argument('--task', type=str, choices=['e2e_nlg_cleaned', 'xsum', 'wmt22'], help='the task')
     parser.add_argument('--ckpt', help='the checkpoint file')
+    parser.add_argument('--corrector', action='store_true', help='whether the T5 model is a corrector')
+    parser.add_argument('--single_candidate', action='store_true',
+                        help="whether the corrector receives one or more candidates as input")
     parser.add_argument('--split', choices=['train', 'validation', 'test'], default='test', help='the data split')
     parser.add_argument('--bsize', default=32, type=int, help="the batch size")
     parser.add_argument('--sample', action='store_true', help="whether to also sample from the model")

@@ -56,7 +56,7 @@ def _create_corrector_data(input_data, sampled_data_file, greedy_data_file, sing
             candidates = [greedy_candidates[i]]
         else:
             candidates = [greedy_candidates[i]] + sampled_candidates[i]
-        corrector_input.append("source: {}\ncandidates: ".format(example) + (sent_token).join(candidates))
+        corrector_input.append("source: {}{}candidates: ".format(example, sent_token) + (sent_token).join(candidates))
 
     return corrector_input
 
@@ -178,7 +178,7 @@ if __name__ == "__main__":
     parser.add_argument('--task', default='wmt22', choices=['e2e_nlg_cleaned', 'xsum', 'wmt22'], type=str,
                         help='the task name')
     parser.add_argument('--corrector', action='store_true', help='whether the T5 model is a corrector')
-    parser.add_argument('--single_candidate', default=False, type=str,
+    parser.add_argument('--single_candidate', action='store_true',
                         help="whether the corrector receives one or more candidates as input")
     parser.add_argument('--bsize', default=8, type=int, help="the batch size")
     parser.add_argument('--grad_acc_steps', default=16, type=int, help="the gradient accumulation steps size")
