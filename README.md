@@ -57,7 +57,7 @@ python train_t5.py --task xsum --corrector --bsize 8 --grad_acc_steps 16 --outpu
 To obtain predictions from the corrector, use the `eval_t5.py` script:
 
 ```
-python eval_t5.py --task xsum --ckpt lmcor_xsum --split test --bsize 32 
+python eval_t5.py --task xsum --corrector --ckpt lmcor_xsum --split test --bsize 32 
 ```
 The outputs of LMCor will be saved in the model folder in the file `model_preds.txt`.
 
