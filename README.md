@@ -71,10 +71,10 @@ python compute_textgen_metrics --task xsum --hyp lmcor_xsum/model_preds.txt
 ## Reference
 Please feel free to cite our paper if you use our code or proposed algorithm.:
 ```
-@misc{vernikos2023small,
+@misc{vernikos2024small,
       title={Small Language Models Improve Giants by Rewriting Their Outputs}, 
       author={Giorgos Vernikos and Arthur Bražinskas and Jakub Adamek and Jonathan Mallinson and Aliaksei Severyn and Eric Malmi},
-      year={2023},
+      year={2024},
       eprint={2305.13514},
       archivePrefix={arXiv},
       primaryClass={cs.CL}
