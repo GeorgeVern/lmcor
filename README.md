@@ -1,6 +1,6 @@
 # LM-Corrrector
 
-> [**Small Language Models Improve Giants by Rewriting Their Outputs**](https://arxiv.org/abs/2305.13514v1)  
+> [**Small Language Models Improve Giants by Rewriting Their Outputs**](https://arxiv.org/abs/2305.13514v2)  
 > Giorgos Vernikos, Arthur Bražinskas, Jakub Adamek, Jonathan Mallinson, Aliaksei Severyn, Eric Malmi  
 > European Chapter of the Association for Computational Linguistics (EACL) 2024
 
