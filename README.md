@@ -1,4 +1,4 @@
-# LM-Corrrector
+# LM-Corrector
 
 > [**Small Language Models Improve Giants by Rewriting Their Outputs**](https://arxiv.org/abs/2305.13514v2)  
 > Giorgos Vernikos, Arthur Bražinskas, Jakub Adamek, Jonathan Mallinson, Aliaksei Severyn, Eric Malmi  
