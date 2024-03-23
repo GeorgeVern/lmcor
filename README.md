@@ -1,6 +1,6 @@
 # LM-Corrector
 
-> [**Small Language Models Improve Giants by Rewriting Their Outputs**](https://arxiv.org/abs/2305.13514v2)  
+> [**Small Language Models Improve Giants by Rewriting Their Outputs**](https://aclanthology.org/2024.eacl-long.165/)  
 > Giorgos Vernikos, Arthur Bražinskas, Jakub Adamek, Jonathan Mallinson, Aliaksei Severyn, Eric Malmi  
 > European Chapter of the Association for Computational Linguistics (EACL) 2024
 
@@ -71,13 +71,15 @@ python compute_textgen_metrics --task xsum --hyp lmcor_xsum/model_preds.txt
 ## Reference
 Please feel free to cite our paper if you use our code or proposed algorithm.:
 ```
-@misc{vernikos2024small,
-      title={Small Language Models Improve Giants by Rewriting Their Outputs}, 
-      author={Giorgos Vernikos and Arthur Bražinskas and Jakub Adamek and Jonathan Mallinson and Aliaksei Severyn and Eric Malmi},
-      year={2024},
-      eprint={2305.13514},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{vernikos-etal-2024-small,
+    title = "Small Language Models Improve Giants by Rewriting Their Outputs",
+    author = "Vernikos, Giorgos  and Brazinskas, Arthur  and Adamek, Jakub  and Mallinson, Jonathan  and Severyn, Aliaksei  and Malmi, Eric",
+    booktitle = "Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = mar,
+    year = "2024",
+    address = "St. Julian{'}s, Malta",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.eacl-long.165",
 }
 ```
 
